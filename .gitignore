@@ -22,7 +22,7 @@ venv.bak/
 .ipynb_checkpoints
 
 # ================================
-# Data Files (IMPORTANT)
+# Data Files (CRITICAL)
 # ================================
 data/
 *.csv
@@ -68,18 +68,25 @@ dist/
 *.temp
 
 # ================================
-# ML Models
+# ML Models (IGNORE - too large)
 # ================================
 *.pkl
 *.joblib
 *.model
 
 # ================================
-# Outputs
+# Outputs (CONTROLLED TRACKING)
 # ================================
-outputs/
-reports/
-figures/
+outputs/*
+
+# Keep visuals for portfolio
+!outputs/figures/
+!outputs/figures/*.png
+!outputs/figures/*.jpg
+
+# Keep metrics
+!outputs/metrics/
+!outputs/metrics/*.json
 
 # ================================
 # Large Files
